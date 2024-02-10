@@ -9,3 +9,132 @@
 body{
     font-family: Montserrat;
 }
+
+nav {
+    
+    display: flex;
+    justify-content: space-between;
+    background-color: #1C2833;
+    padding: 0 50px 0 80px;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+nav  ul {
+    
+    display: flex;
+   
+}
+
+nav  ul li{
+    margin: 0 8px;
+    list-style-type: none;
+}
+nav  ul li a {
+
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700px;
+    color: white;
+    padding: 7px 13px ;
+    border-radius: 3px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover, nav li a.active{
+    background-color: #566573;
+}
+
+.menu-btn{
+
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+#click{
+    display: none;
+}
+
+
+
+
+/* header section code start  */
+
+
+header {
+   
+    background-image: url("img/bg.jpg");
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive work start  */
+
+
+@media only screen and (max-width:980px){
+
+    .menu-btn{
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #17202a;
+        height: 100vh;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.5s ease;
+
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+
+    #click:checked ~ ul{
+        left: 0%;
+
+    }
+    nav ul li{
+        margin: 50px 0;
+
+    }
+    nav ul li a{
+        font-size: 22px;
+    }
+    nav ul li a:hover,nav ul li a.active{
+        background: none;
+        color: red;
+    }
+
+
+
+}
+
